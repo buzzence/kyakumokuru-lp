@@ -8,8 +8,35 @@
     <meta name="keywords" content="飲食店,SNS運用,採用,集客,インフルエンサー,Instagram,東京">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "brand-gold": "#ffe700",
+                        "brand-orange": "#fbb03b",
+                        "brand-dark": "#0a0a0a",
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .comparison-new-section * {
+            box-sizing: border-box;
+        }
+        .comparison-new-section .cell-h {
+            height: 80px;
+        }
+        .comparison-new-section .header-h {
+            height: 140px;
+        }
+    </style>
 </head>
 <body>
     <!-- ファーストビュー -->
@@ -106,130 +133,230 @@
         </div>
     </section>
 
-    <!-- 競合比較 -->
-    <section id="comparison" class="comparison">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <p class="section-en">COMPARISON</p>
-                <h2 class="section-title">他社との<span class="highlight-pink">比較</span></h2>
+    <!-- 競合比較（Tailwind版） -->
+    <section id="comparison" class="comparison-new-section bg-[#050505] font-sans antialiased text-slate-200 overflow-x-hidden">
+        <div class="relative flex w-full flex-col">
+            <!-- 背景グロー -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-[#ffe700]/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
+
+            <!-- ヘッダー -->
+            <div class="w-full px-4 md:px-10 lg:px-40 pt-20 pb-12 flex flex-col items-center justify-center text-center relative z-10">
+                <h2 class="text-[#fbb03b] text-xs md:text-sm font-bold tracking-[0.2em] uppercase mb-4 border border-[#fbb03b]/30 px-3 py-1 rounded-full bg-[#fbb03b]/5 shadow-[0_0_15px_rgba(251,176,59,0.2)]">
+                    High Performance
+                </h2>
+                <h1 class="text-white text-3xl md:text-5xl lg:text-6xl font-black tracking-tight mb-6 max-w-5xl leading-tight drop-shadow-2xl">
+                    他社を圧倒する<br/>
+                    <span class="bg-clip-text text-transparent bg-gradient-to-br from-[#ffe700] to-[#fbb03b] drop-shadow-sm">Buzzenceの品質と成果</span>
+                </h1>
+                <p class="text-gray-400 text-sm md:text-base max-w-2xl leading-relaxed font-bold">
+                    一般的なSNS運用代行や従来の求人媒体とは一線を画す、<br class="hidden md:block"/>飲食店に特化した「集客×採用」の包括的ソリューション。
+                </p>
             </div>
-            <div class="comparison-table-wrapper" data-aos="fade-up">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th class="col-label">比較項目</th>
-                            <th class="col-ours">キャクモクルー</th>
-                            <th class="col-competitor">一般的なSNS運用代行</th>
-                            <th class="col-competitor">大手求人媒体</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="row-label">主な目的</td>
-                            <td class="col-ours">
-                                <span class="icon-excellent">◎</span>
-                                <strong>集客 × 求人の一石二鳥</strong>
-                            </td>
-                            <td class="col-competitor">
-                                <span class="icon-average">△</span>
-                                集客・ブランディングのみ
-                            </td>
-                            <td class="col-competitor">
-                                <span class="icon-poor">×</span>
-                                求人のみ
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">月額費用</td>
-                            <td class="col-ours">
-                                <span class="icon-excellent">◎</span>
-                                <strong>月15万円〜</strong>
-                                <span class="sub-text">（集客・求人込み）</span>
-                            </td>
-                            <td class="col-competitor">
-                                <span class="icon-average">△</span>
-                                月20〜50万円
-                                <span class="sub-text">（別途広告費が必要な場合も）</span>
-                            </td>
-                            <td class="col-competitor">
-                                <span class="icon-poor">×</span>
-                                掲載ごとに数万〜数十万円
-                                <span class="sub-text">（採用できなくても費用発生）</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">成果保証</td>
-                            <td class="col-ours">
-                                <span class="icon-excellent">◎</span>
-                                <strong>全額返金保証あり</strong>
-                                <span class="sub-text">（結果にコミット）</span>
-                            </td>
-                            <td class="col-competitor">
-                                <span class="icon-average">△</span>
-                                基本的になし
-                                <span class="sub-text">（投稿数のみ保証など）</span>
-                            </td>
-                            <td class="col-competitor">
-                                <span class="icon-poor">×</span>
-                                なし
-                                <span class="sub-text">（掲載期間の保証のみ）</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">運用担当者</td>
-                            <td class="col-ours">
-                                <span class="icon-excellent">◎</span>
-                                <strong>現役インフルエンサー</strong>
-                                <span class="sub-text">（S/Aランクの実力者）</span>
-                            </td>
-                            <td class="col-competitor">
-                                <span class="icon-average">△</span>
-                                一般社員・アルバイト
-                                <span class="sub-text">（マニュアル対応が多い）</span>
-                            </td>
-                            <td class="col-competitor">
-                                <span class="icon-poor">×</span>
-                                -
-                                <span class="sub-text">（自社で原稿作成・管理）</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">拡散力</td>
-                            <td class="col-ours">
-                                <span class="icon-excellent">◎</span>
-                                <strong>圧倒的に高い</strong>
-                                <span class="sub-text">（総フォロワー数万〜数十万）</span>
-                            </td>
-                            <td class="col-competitor">
-                                <span class="icon-average">△</span>
-                                低い〜中程度
-                                <span class="sub-text">（アカウントが育つまで時間がかかる）</span>
-                            </td>
-                            <td class="col-competitor">
-                                <span class="icon-poor">×</span>
-                                なし
-                                <span class="sub-text">（求職者にしか届かない）</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="row-label">採用への効果</td>
-                            <td class="col-ours">
-                                <span class="icon-excellent">◎</span>
-                                <strong>お店のファンを採用</strong>
-                                <span class="sub-text">（定着率が高い）</span>
-                            </td>
-                            <td class="col-competitor">
-                                <span class="icon-average">△</span>
-                                効果は限定的
-                            </td>
-                            <td class="col-competitor">
-                                <span class="icon-poor">×</span>
-                                条件比較で選ばれる
-                                <span class="sub-text">（給与重視で離職されやすい）</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+
+            <!-- 比較テーブル -->
+            <div class="w-full px-2 md:px-6 lg:px-10 pb-12 flex justify-center relative z-10">
+                <div class="w-full overflow-x-auto pb-12 flex justify-center">
+                    <div class="grid grid-cols-[140px_320px_1fr_1fr_1fr] min-w-[1100px] max-w-[1400px] mx-auto text-center items-end bg-[#0a0a0a] rounded-3xl relative isolate">
+
+                        <!-- 比較項目列 -->
+                        <div class="flex flex-col bg-[#0f0f0f] rounded-l-3xl border-y border-l border-white/5 z-0">
+                            <div class="header-h flex flex-col items-center justify-center p-4 border-b border-white/5 bg-[#121212] rounded-tl-3xl">
+                                <span class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-2">Metrics</span>
+                                <span class="text-gray-300 font-bold text-sm">比較項目</span>
+                            </div>
+                            <div class="cell-h flex items-center justify-center px-4 border-b border-white/5 bg-[#121212]">
+                                <span class="text-gray-400 text-xs font-bold">主な提供価値</span>
+                            </div>
+                            <div class="cell-h flex items-center justify-center px-4 border-b border-white/5 bg-[#121212]">
+                                <span class="text-gray-400 text-xs font-bold">人材・PRの質</span>
+                            </div>
+                            <div class="cell-h flex items-center justify-center px-4 border-b border-white/5 bg-[#121212]">
+                                <span class="text-gray-400 text-xs font-bold">採用支援（求人）</span>
+                            </div>
+                            <div class="cell-h flex items-center justify-center px-4 border-b border-white/5 bg-[#121212]">
+                                <span class="text-gray-400 text-xs font-bold">飲食業界の知見</span>
+                            </div>
+                            <div class="cell-h flex items-center justify-center px-4 border-b border-white/5 bg-[#121212]">
+                                <span class="text-gray-400 text-xs font-bold">運用の手間</span>
+                            </div>
+                            <div class="cell-h flex items-center justify-center px-4 border-b border-white/5 bg-[#121212]">
+                                <span class="text-gray-400 text-xs font-bold">実績</span>
+                            </div>
+                            <div class="cell-h flex items-center justify-center px-4 bg-[#161616] rounded-bl-3xl">
+                                <span class="text-[#ffe700] text-sm font-bold">月額費用</span>
+                            </div>
+                        </div>
+
+                        <!-- Buzzence列（ハイライト） -->
+                        <div class="flex flex-col relative z-20 -my-4 transform scale-100 shadow-[0_0_60px_rgba(255,231,0,0.15)] rounded-2xl overflow-hidden border-2 border-[#ffe700] bg-[#1a1a1a]">
+                            <div class="header-h bg-[radial-gradient(circle_at_center_top,rgba(255,231,0,0.15),transparent_70%)] flex flex-col items-center justify-center p-4 border-b border-[#ffe700]/30 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-tr from-[#ffe700]/10 to-transparent opacity-50"></div>
+                                <h3 class="text-white font-black text-4xl tracking-tighter drop-shadow-md mt-4 relative">
+                                    Buzzence
+                                </h3>
+                                <div class="mt-1 flex items-center gap-1">
+                                    <span class="text-[#ffe700] text-[10px] font-bold tracking-widest uppercase">Premium Plan</span>
+                                </div>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-[#ffe700]/20 bg-gradient-to-b from-[#ffe700]/5 to-[#fbb03b]/[0.02] relative">
+                                <span class="text-white font-black text-lg leading-tight">集客×求人の<br/>一気通貫支援</span>
+                                <span class="absolute top-2 right-2 text-[9px] bg-[#ffe700]/20 text-[#ffe700] border border-[#ffe700]/30 px-1.5 py-0.5 rounded font-bold">ROI最大</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-[#ffe700]/20 bg-gradient-to-b from-[#ffe700]/5 to-[#fbb03b]/[0.02] relative">
+                                <span class="text-white font-bold text-base leading-tight">自社スクール<br/>卒業生中心</span>
+                                <span class="absolute top-2 right-2 text-[9px] bg-[#ffe700]/20 text-[#ffe700] border border-[#ffe700]/30 px-1.5 py-0.5 rounded font-bold">高品質</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-[#ffe700]/20 bg-gradient-to-b from-[#ffe700]/5 to-[#fbb03b]/[0.02]">
+                                <div class="relative w-10 h-10 flex items-center justify-center">
+                                    <div class="absolute inset-0 rounded-full border-2 border-[#ffe700] shadow-[0_0_15px_rgba(255,231,0,0.4)]"></div>
+                                    <div class="w-5 h-5 rounded-full bg-gradient-to-br from-[#ffe700] to-[#fbb03b] shadow-inner"></div>
+                                </div>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-[#ffe700]/20 bg-gradient-to-b from-[#ffe700]/5 to-[#fbb03b]/[0.02] relative">
+                                <div class="relative w-12 h-12 flex items-center justify-center">
+                                    <div class="absolute inset-0 rounded-full border-[3px] border-[#ffe700] shadow-[0_0_20px_rgba(255,231,0,0.5)] bg-[#ffe700]/10"></div>
+                                    <div class="w-6 h-6 rounded-full bg-gradient-to-br from-[#ffe700] to-[#fbb03b] shadow-[0_0_10px_rgba(255,231,0,0.8)]"></div>
+                                </div>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-[#ffe700]/20 bg-gradient-to-b from-[#ffe700]/5 to-[#fbb03b]/[0.02] relative">
+                                <span class="text-white font-bold text-base">完全にお任せ</span>
+                                <span class="absolute top-2 right-2 text-[9px] bg-[#ffe700]/20 text-[#ffe700] border border-[#ffe700]/30 px-1.5 py-0.5 rounded font-bold">楽々</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-[#ffe700]/20 bg-gradient-to-b from-[#ffe700]/5 to-[#fbb03b]/[0.02]">
+                                <div class="flex items-baseline gap-1">
+                                    <span class="text-[#ffe700] font-black text-3xl drop-shadow-sm">300</span>
+                                    <span class="text-[#ffe700]/80 font-bold text-sm">件+</span>
+                                </div>
+                                <span class="text-gray-400 text-[10px] font-bold">1投稿 平均予約獲得</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 bg-gradient-to-b from-[#ffe700]/20 to-[#ffe700]/5 relative overflow-hidden">
+                                <div class="absolute inset-0 bg-[#ffe700]/5 animate-pulse"></div>
+                                <div class="relative z-10 flex flex-col items-center">
+                                    <span class="text-[#ffe700] font-black text-3xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">15〜40<span class="text-lg">万円</span></span>
+                                    <span class="text-[10px] text-[#fbb03b]/80 font-bold uppercase tracking-wider mt-1">Best Value</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 一般的なSNS代理店列 -->
+                        <div class="flex flex-col bg-[#0e0e0e] border-y border-r border-white/5 z-0">
+                            <div class="header-h flex flex-col items-center justify-center p-4 border-b border-white/5">
+                                <span class="text-[10px] text-gray-500 font-bold mb-1">Competitor A</span>
+                                <span class="text-gray-300 font-bold text-sm leading-tight">一般的な<br/>SNS代理店</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-white/5">
+                                <span class="text-gray-500 text-xs font-medium leading-tight">認知・<br/>ブランディングのみ</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-white/5">
+                                <span class="text-gray-500 text-xs font-medium">外部アサイン</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-white/5">
+                                <span class="material-symbols-outlined text-gray-700 text-3xl">close</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-white/5">
+                                <span class="material-symbols-outlined text-gray-600 text-3xl">change_history</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-white/5">
+                                <span class="text-gray-500 text-sm font-medium">なし</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-white/5">
+                                <span class="text-gray-600 text-xs font-medium leading-tight">数値成果が<br/>見えにくい</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 bg-[#121212]">
+                                <span class="text-gray-500 font-bold text-lg">25〜50<span class="text-xs">万円</span></span>
+                            </div>
+                        </div>
+
+                        <!-- インフルエンサー施策列 -->
+                        <div class="flex flex-col bg-[#0e0e0e] border-y border-r border-white/5 z-0">
+                            <div class="header-h flex flex-col items-center justify-center p-4 border-b border-white/5">
+                                <span class="text-[10px] text-gray-500 font-bold mb-1">Competitor B</span>
+                                <span class="text-gray-300 font-bold text-sm leading-tight">インフルエンサー<br/>施策</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-white/5">
+                                <span class="text-gray-500 text-xs font-medium leading-tight">単発のPR・<br/>認知拡大</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-white/5">
+                                <span class="text-gray-500 text-xs font-medium">公募制</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-white/5">
+                                <span class="material-symbols-outlined text-gray-700 text-3xl">close</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-white/5">
+                                <span class="material-symbols-outlined text-gray-600 text-3xl">change_history</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-white/5">
+                                <span class="text-gray-500 text-sm font-medium">あり</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-white/5">
+                                <span class="text-gray-600 text-xs font-medium leading-tight">インプレッション<br/>のみ</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 bg-[#121212]">
+                                <span class="text-gray-500 font-bold text-lg">5<span class="text-xs">万円〜</span></span>
+                            </div>
+                        </div>
+
+                        <!-- 求人媒体列 -->
+                        <div class="flex flex-col bg-[#0e0e0e] rounded-r-3xl border-y border-r border-white/5 z-0">
+                            <div class="header-h flex flex-col items-center justify-center p-4 border-b border-white/5 rounded-tr-3xl">
+                                <span class="text-[10px] text-gray-500 font-bold mb-1">Competitor C</span>
+                                <span class="text-gray-300 font-bold text-sm leading-tight">求人媒体</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-white/5">
+                                <span class="text-gray-500 text-xs font-medium leading-tight">応募者の<br/>獲得のみ</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-white/5">
+                                <span class="text-gray-500 text-sm font-medium">なし</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-white/5">
+                                <span class="material-symbols-outlined text-gray-500 text-2xl">circle</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-white/5">
+                                <span class="material-symbols-outlined text-gray-500 text-2xl">circle</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-white/5">
+                                <span class="text-gray-500 text-sm font-medium">あり</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 border-b border-white/5">
+                                <span class="text-gray-600 text-xs font-medium leading-tight">閲覧数のみ</span>
+                            </div>
+                            <div class="cell-h flex flex-col items-center justify-center px-2 bg-[#121212] rounded-br-3xl">
+                                <span class="text-gray-500 font-bold text-lg">数<span class="text-xs">万円〜</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 保証セクション -->
+            <div class="w-full flex flex-col items-center justify-center pb-16 px-4 z-10">
+                <div class="relative w-full max-w-3xl group mb-12">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-[#ffe700]/30 via-white/10 to-[#ffe700]/30 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                    <div class="relative bg-[#151515] border border-[#ffe700]/30 rounded-xl p-6 md:p-10 text-center shadow-2xl flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
+                        <div class="relative flex-shrink-0">
+                            <div class="w-20 h-20 rounded-full border-2 border-[#ffe700] flex items-center justify-center bg-[#ffe700]/10 relative z-10">
+                                <span class="material-symbols-outlined text-4xl text-[#ffe700] drop-shadow-[0_0_8px_rgba(255,231,0,0.5)]">verified_user</span>
+                            </div>
+                            <div class="absolute inset-0 bg-[#ffe700]/20 blur-xl rounded-full"></div>
+                        </div>
+                        <div class="text-left">
+                            <h4 class="text-[#ffe700] font-black text-xl md:text-2xl mb-1 tracking-tight drop-shadow-sm">Satisfaction Guaranteed</h4>
+                            <p class="text-white font-bold text-lg leading-snug">自信があるからこその価格設定。<br/><span class="text-gray-400 text-sm font-normal">提示した金額以外、追加費用は一切いただきません（※オプション除く）</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTAボタン -->
+                <div class="flex flex-col items-center justify-center pb-12 gap-6 relative z-10">
+                    <a href="YOUR_LINE_URL_HERE" class="relative group flex min-w-[320px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-20 px-12 bg-gradient-to-r from-[#ffe700] to-[#fbb03b] text-black text-xl font-black tracking-wide shadow-[0_0_40px_rgba(255,231,0,0.3)] hover:shadow-[0_0_60px_rgba(255,231,0,0.5)] transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 no-underline">
+                        <span class="relative z-10 mr-3">今すぐ無料で相談する</span>
+                        <span class="material-symbols-outlined text-[28px] transition-transform duration-300 group-hover:translate-x-2 relative z-10 font-bold">arrow_forward</span>
+                    </a>
+                    <p class="text-gray-400 text-sm font-medium flex items-center gap-2 bg-[#1a1a1a] px-4 py-2 rounded-full border border-white/5">
+                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_10px_#22c55e]"></span>
+                        導入実績 <span class="text-white font-bold">500店舗以上</span> ・ 継続率 <span class="text-white font-bold">98%</span>
+                    </p>
+                </div>
             </div>
         </div>
     </section>
