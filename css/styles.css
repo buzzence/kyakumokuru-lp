@@ -1461,6 +1461,219 @@ button {
 }
 
 /* ========================================
+   COMPARISON TABLE (競合比較)
+   ======================================== */
+.comparison {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.comparison .section-en {
+    color: var(--orange);
+}
+
+.comparison .section-title {
+    color: var(--black);
+}
+
+.comparison-table-wrapper {
+    overflow-x: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    min-width: 800px;
+}
+
+.comparison-table thead th {
+    padding: 24px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.comparison-table th.col-label {
+    background: #f8f8f8;
+    color: var(--black);
+    width: 15%;
+}
+
+.comparison-table th.col-ours {
+    background: linear-gradient(135deg, var(--yellow) 0%, var(--orange) 100%);
+    color: var(--black);
+    font-size: 18px;
+    width: 30%;
+    position: relative;
+}
+
+.comparison-table th.col-ours::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--black);
+    opacity: 0.1;
+}
+
+.comparison-table th.col-competitor {
+    background: #f0f0f0;
+    color: var(--gray-dark);
+    width: 27.5%;
+}
+
+.comparison-table tbody td {
+    padding: 24px 20px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.comparison-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table tbody tr:hover {
+    background: rgba(251, 176, 59, 0.03);
+}
+
+.comparison-table td.row-label {
+    background: #fafafa;
+    font-weight: 700;
+    color: var(--black);
+    text-align: left;
+    padding-left: 24px;
+}
+
+.comparison-table td.col-ours {
+    background: linear-gradient(180deg, rgba(255, 231, 0, 0.08) 0%, rgba(251, 176, 59, 0.08) 100%);
+    position: relative;
+}
+
+.comparison-table td.col-ours::before,
+.comparison-table td.col-ours::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, var(--yellow), var(--orange));
+    opacity: 0.3;
+}
+
+.comparison-table td.col-ours::before {
+    left: 0;
+}
+
+.comparison-table td.col-ours::after {
+    right: 0;
+}
+
+.comparison-table td.col-ours strong {
+    display: block;
+    font-size: 15px;
+    color: var(--black);
+    margin-top: 4px;
+}
+
+.comparison-table td.col-competitor {
+    color: var(--gray-dark);
+}
+
+.comparison-table .sub-text {
+    display: block;
+    font-size: 12px;
+    color: var(--gray);
+    margin-top: 4px;
+}
+
+/* アイコンスタイル */
+.icon-excellent {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    color: white;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.icon-average {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    background: #FCD34D;
+    color: var(--black);
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.icon-poor {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    background: #EF4444;
+    color: white;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* Comparison Table Responsive */
+@media (max-width: 768px) {
+    .comparison-table {
+        min-width: 700px;
+    }
+
+    .comparison-table thead th {
+        padding: 16px 12px;
+        font-size: 13px;
+    }
+
+    .comparison-table th.col-ours {
+        font-size: 14px;
+    }
+
+    .comparison-table tbody td {
+        padding: 16px 12px;
+        font-size: 12px;
+    }
+
+    .comparison-table td.col-ours strong {
+        font-size: 13px;
+    }
+
+    .comparison-table .sub-text {
+        font-size: 10px;
+    }
+
+    .icon-excellent,
+    .icon-average,
+    .icon-poor {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 12px;
+    }
+}
+
+/* ========================================
    FLOW SECTION (参加の流れ) - 洗練版
    ======================================== */
 .flow {
