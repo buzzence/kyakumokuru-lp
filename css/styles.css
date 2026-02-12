@@ -281,7 +281,23 @@ button {
 .fv img {
     width: 100%;
     height: auto;
+}
+
+.fv img.hero-desktop {
+    display: none;
+}
+
+.fv img.hero-mobile {
     display: block;
+}
+
+@media (min-width: 768px) {
+    .fv img.hero-desktop {
+        display: block;
+    }
+    .fv img.hero-mobile {
+        display: none;
+    }
 }
 
 /* CTA Section (FV直下) */
